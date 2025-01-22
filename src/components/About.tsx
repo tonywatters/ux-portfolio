@@ -31,7 +31,7 @@ const About: React.FC = () => {
           </div>
           <div>
             <img
-              src="/images/tonywatters.png"
+              src="./images/tonywatters.png"
               alt="Profile"
               className="rounded-lg shadow-lg w-full"
             />

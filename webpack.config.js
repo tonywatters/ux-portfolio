@@ -1,12 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/ux-portfolio/' // Add this line for GitHub Pages
+    publicPath: '/'
   },
   mode: 'development',
   module: {
@@ -20,6 +21,10 @@ module.exports = {
         test: /\.css$/,
         use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
+      {
+        test: /\.(png|jpg|jpeg|gif)$/i,
+        type: 'asset/resource'
+      }
     ],
   },
   resolve: {
@@ -29,6 +34,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
     }),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'public/images', to: 'images' }
+      ]
+    })
   ],
   devServer: {
     static: {
