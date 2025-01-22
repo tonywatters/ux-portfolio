@@ -54,7 +54,7 @@ const App: React.FC = () => {
   );
 
   return (
-    <Router>
+    <Router basename="/ux-portfolio">
       <div className="min-h-screen bg-gray-50">
         <Navigation 
           isMenuOpen={isMenuOpen} 

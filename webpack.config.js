@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'  // Add this line
+    publicPath: '/ux-portfolio/' // Add this line for GitHub Pages
   },
   mode: 'development',
   module: {
@@ -36,6 +36,6 @@ module.exports = {
     },
     port: 3000,
     hot: true,
-    historyApiFallback: true  // Add this line
+    historyApiFallback: true
   },
 };
