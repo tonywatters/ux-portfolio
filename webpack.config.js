@@ -7,14 +7,23 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/'
+    publicPath: '/ux-portfolio/' // Updated public path
   },
-  mode: 'development',
+  mode: 'production', // Ensure production mode
   module: {
     rules: [
       {
         test: /\.(ts|tsx)$/,
-        use: 'babel-loader',
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript'
+            ]
+          }
+        },
         exclude: /node_modules/,
       },
       {
