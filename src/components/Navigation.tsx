@@ -1,7 +1,6 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { scrollToSection } from '../utils';
 
 interface NavigationProps {
   isMenuOpen: boolean;
@@ -9,28 +8,17 @@ interface NavigationProps {
   name: string;
 }
 
-// In your Navigation component:
-const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
-  e.preventDefault();
-  scrollToSection(sectionId);
-};
-
-// Update your navigation links:
-<a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
-
 const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name }) => {
   const location = useLocation();
   
-  const scrollToSection = (sectionId: string) => {
-    // If we're not on the home page, navigate there first
-    if (location.pathname !== '/') {
-      window.location.href = '/#' + sectionId;
-      return;
-    }
-    
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (sectionId: string) => {
+    if (location.pathname.includes('/project/')) {
+      window.location.href = `/ux-portfolio/#${sectionId}`;
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   };
 
@@ -45,19 +33,19 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
-              onClick={() => scrollToSection('about')} 
+              onClick={() => handleNavClick('about')} 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
             >
               About
             </button>
             <button 
-              onClick={() => scrollToSection('work')} 
+              onClick={() => handleNavClick('work')} 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
             >
               Work
             </button>
             <button 
-              onClick={() => scrollToSection('contact')} 
+              onClick={() => handleNavClick('contact')} 
               className="text-gray-700 hover:text-gray-900 transition-colors duration-300"
             >
               Contact
@@ -82,7 +70,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
           <div className="px-2 pt-2 pb-3 space-y-1">
             <button 
               onClick={() => {
-                scrollToSection('about');
+                handleNavClick('about');
                 setIsMenuOpen(false);
               }}
               className="block w-full text-left px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-all duration-300"
@@ -91,7 +79,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
             </button>
             <button 
               onClick={() => {
-                scrollToSection('work');
+                handleNavClick('work');
                 setIsMenuOpen(false);
               }}
               className="block w-full text-left px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-all duration-300"
@@ -100,7 +88,7 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
             </button>
             <button 
               onClick={() => {
-                scrollToSection('contact');
+                handleNavClick('contact');
                 setIsMenuOpen(false);
               }}
               className="block w-full text-left px-3 py-2 text-gray-700 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-all duration-300"
