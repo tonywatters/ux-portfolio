@@ -58,7 +58,7 @@ export interface ProjectDetailContent {
     },
     {
       id: 'learning-pool',
-      title: "Learning Pool Design work",
+      title: "LCMS Key Metrics feature",
       description: "The Key Metrics feature in the Content Details tab provides administrators with an overview of content performance, showing metrics like Total Learners, Completion Rate, and Success Rate. With filtering options for specific Accounts or Licenses, it enables targeted analysis and supports data-driven decisions to improve content effectiveness and learner engagement.",
       tags: ["Information Architecture", "Data Visualization", "Wirefames", "Prototyping"],
       image: "/ux-portfolio/images/cards/keymetrics1.png",

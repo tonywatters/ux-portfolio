@@ -37,8 +37,8 @@ const App: React.FC = () => {
     },
     {
       id: 'learning-pool',
-      title: "Learning Pool Design work",
-      description: "Designed user-friendly interfaces and streamlined workflows for Learning Pool's platform, improving navigation and evidence upload processes.",
+      title: "LCMS Key Metrics feature",
+      description:"The Key Metrics feature in the Content Details tab provides administrators with an overview of content performance, showing metrics like Total Learners, Completion Rate, and Success Rate.",
       tags: ["UX Research", "User Testing","Mobile Design", "Wireframing", "Prototyping"],
       image: "/ux-portfolio/images/pages/keymetrics1.png"
     }
