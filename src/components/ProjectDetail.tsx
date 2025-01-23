@@ -48,7 +48,7 @@ const ProjectDetail: React.FC = () => {
          <img 
            src={getImagePath(project.mainImage)}
            alt={project.title} 
-           className="w-full rounded-lg shadow-lg cursor-pointer hover:opacity-95 transition-opacity"
+           className="w-full rounded-lg shadow-lg"
          />
        </div>
 
