@@ -1,12 +1,22 @@
 import React from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { scrollToSection } from '../utils';
 
 interface NavigationProps {
   isMenuOpen: boolean;
   setIsMenuOpen: (isOpen: boolean) => void;
   name: string;
 }
+
+// In your Navigation component:
+const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
+  e.preventDefault();
+  scrollToSection(sectionId);
+};
+
+// Update your navigation links:
+<a href="#about" onClick={(e) => handleNavClick(e, 'about')}>About</a>
 
 const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name }) => {
   const location = useLocation();
