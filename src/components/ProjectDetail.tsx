@@ -57,7 +57,7 @@ const ProjectDetail: React.FC = () => {
          <p className="text-gray-600 mb-6">{project.challenge}</p>
 
          <h2 className="text-2xl font-semibold mb-4">Process</h2>
-         <p className="text-gray-600 mb-6">{project.process}</p>
+         <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: project.process }} />
          
          {project.processImages && (
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -74,10 +74,10 @@ const ProjectDetail: React.FC = () => {
          )}
 
          <h2 className="text-2xl font-semibold mb-4">Solution</h2>
-         <p className="text-gray-600 mb-6">{project.solution}</p>
+         <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: project.solution }} />
 
          <h2 className="text-2xl font-semibold mb-4">Results</h2>
-         <p className="text-gray-600 mb-6">{project.results}</p>
+         <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: project.results }} />
          
          {project.resultImages && (
            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">

@@ -23,7 +23,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
             <Link 
               to={`/project/${project.id}`}
               key={index} 
-              className="group bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow transition-all duration-300"
             >
               <div className="relative">
                 <img
