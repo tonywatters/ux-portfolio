@@ -14,11 +14,12 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
   const handleNavClick = (sectionId: string) => {
     if (location.pathname.includes('/project/')) {
       window.location.href = `/ux-portfolio/#${sectionId}`;
-    } else {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
+      return;
+    }
+    
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
