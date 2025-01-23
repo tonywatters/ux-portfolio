@@ -7,14 +7,11 @@ const Hero: React.FC = () => {
         <div className="space-y-8">
           {/* Main headline */}
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900">
-            Creating meaningful digital experiences through user-centered design
-          </h1>
+          Hi, I'm Tony, a Senior Product Designer in Donegal, Ireland, dedicated to creating tech-for-good solutions. </h1>
 
           {/* Description */}
           <p className="text-xl text-gray-600 max-w-3xl">
-            Senior UX Designer with 10+ years of experience in creating innovative and intuitive digital solutions. 
-            Specialized in user research, interaction design, and creating accessible experiences.
-          </p>
+          I craft intuitive digital experiences through user research, wireframing, and prototyping, developing accessible design solutions that transform complex challenges into elegant, user-centered products. </p>
 
           {/* Call to Action Buttons */}
           <div className="flex flex-wrap gap-4">
