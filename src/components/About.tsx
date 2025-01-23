@@ -17,6 +17,16 @@ const About: React.FC = () => {
               My approach combines analytical thinking with creative problem-solving,
               ensuring that every design decision is backed by user insights and data.
             </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Skills</h2>
+            <p>
+            <ul>
+              <li>Visual Design</li>
+              <li>Design Systems</li>
+              <li>User Research</li>
+              <li>Prototyping</li>
+              <li>Web Development</li>
+            </ul>
+            </p>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/in/tony-watters/" className="text-gray-600 hover:text-gray-900">
                 <LinkedinIcon size={24} />
