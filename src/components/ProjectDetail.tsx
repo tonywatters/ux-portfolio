@@ -33,26 +33,6 @@ const ProjectDetail: React.FC = () => {
             <ArrowLeft className="mr-2 group-hover:-translate-x-1 transition-transform" />
             Back to Projects
           </Link>
-          <div className="flex gap-4">
-            <button 
-              onClick={() => handleNavClick('about')}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              About
-            </button>
-            <button 
-              onClick={() => handleNavClick('work')}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Work
-            </button>
-            <button 
-              onClick={() => handleNavClick('contact')}
-              className="text-gray-600 hover:text-gray-900"
-            >
-              Contact
-            </button>
-          </div>
         </div>
         
         <h1 className="text-4xl font-bold text-gray-900 mb-6">{project.title}</h1>

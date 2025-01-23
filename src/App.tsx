@@ -65,10 +65,7 @@ const App: React.FC = () => {
         <div className="pt-16">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route 
-              path="/project/:id" 
-              element={<ProjectDetail projects={projects} />} 
-            />
+            <Route path="/project/:id" element={<ProjectDetail />} /> 
           </Routes>
         </div>
         <BackToTop />
