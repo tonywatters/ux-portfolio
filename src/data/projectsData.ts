@@ -63,7 +63,7 @@ export interface ProjectDetailContent {
       tags: ["Information Architecture", "Data Visualization", "Wirefames", "Prototyping"],
       image: "/ux-portfolio/images/cards/keymetrics1.png",
       mainImage: "/ux-portfolio/images/pages/keymetrics1.png",
-      challenge: "Simplifying complex learning management workflows...",
+      challenge: "The feature includes a filtering mechanism allowing admins to view metrics across all data or drill down into specific Accounts or Licenses, enabling quick assessment of content effectiveness across different user segments. This addition to the Content Details streamlines the process of evaluating content performance, supporting data-driven decision-making for content improvement and learner engagement strategies.",
       process: "I analyzed workflows, created wireframes, designed high-fidelity prototypes, ensured responsiveness and accessibility, and collaborated with developers to deliver a seamless implementation.",
       solution: "We delivered low-fidelity wireframes, high-fidelity mockups, interactive prototypes, and detailed design specifications to streamline the design process. The solution focused on creating an intuitive, filterable Key Metrics feature for the Content Details tab, providing administrators with improved workflows and accessible interfaces.",
       results: "The design enhanced admin workflows for content performance analysis, improved data visualization, and enabled intuitive filtering for segmented data views. The interface adhered to WCAG guidelines, received positive stakeholder feedback, and ensured a smooth handoff to the development team, driving successful implementation.",
