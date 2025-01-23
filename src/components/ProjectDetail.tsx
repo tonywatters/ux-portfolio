@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 import ImageModal from './ImageModal';
@@ -7,6 +7,7 @@ import ImageModal from './ImageModal';
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const location = useLocation();
   const project = projectsData.find(p => p.id === id);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -15,13 +16,13 @@ const ProjectDetail: React.FC = () => {
   }, []);
 
   const handleNavClick = (sectionId: string) => {
-    navigate('/ux-portfolio/');  // Updated to include the correct base path
-    setTimeout(() => {
-      const element = document.getElementById(sectionId);
-      element?.scrollIntoView({ behavior: 'smooth' });
-    }, 100);
+    if (location.pathname !== '/') {
+      window.location.href = `/ux-portfolio/#${sectionId}`;
+    } else {
+      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+    }
   };
-  
+
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -59,7 +60,6 @@ const ProjectDetail: React.FC = () => {
           </div>
         </div>
         
-        {/* Rest of your component remains the same */}
         <h1 className="text-4xl font-bold text-gray-900 mb-6">{project.title}</h1>
         
         <div className="mb-8">
@@ -70,7 +70,47 @@ const ProjectDetail: React.FC = () => {
           />
         </div>
 
-        {/* ... rest of your existing JSX ... */}
+        <div className="prose max-w-none">
+          <h2 className="text-2xl font-semibold mb-4">Challenge</h2>
+          <p className="text-gray-600 mb-6">{project.challenge}</p>
+
+          <h2 className="text-2xl font-semibold mb-4">Process</h2>
+          <p className="text-gray-600 mb-6">{project.process}</p>
+          
+          {project.processImages && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {project.processImages.map((image, index) => (
+                <img 
+                  key={index}
+                  src={image}
+                  alt={`Process step ${index + 1}`}
+                  className="rounded-lg shadow-md cursor-pointer hover:opacity-95 transition-opacity"
+                  onClick={() => setSelectedImage(image)}
+                />
+              ))}
+            </div>
+          )}
+
+          <h2 className="text-2xl font-semibold mb-4">Solution</h2>
+          <p className="text-gray-600 mb-6">{project.solution}</p>
+
+          <h2 className="text-2xl font-semibold mb-4">Results</h2>
+          <p className="text-gray-600 mb-6">{project.results}</p>
+          
+          {project.resultImages && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+              {project.resultImages.map((image, index) => (
+                <img 
+                  key={index}
+                  src={image}
+                  alt={`Result ${index + 1}`}
+                  className="rounded-lg shadow-md cursor-pointer hover:opacity-95 transition-opacity"
+                  onClick={() => setSelectedImage(image)}
+                />
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
       <ImageModal
