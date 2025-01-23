@@ -14,8 +14,7 @@ const About: React.FC = () => {
               and usability testing, I help businesses build products that users love.
             </p>
             <p className="text-gray-600 mb-4">
-              My approach combines analytical thinking with creative problem-solving,
-              ensuring that every design decision is backed by user insights and data.
+             For over a decade, I’ve bridged the gap between users and technology, simplifying complexity as a Senior Product Designer with a programming background. I’ve helped teams, mentored designers, and built scalable design systems. From discovery to user testing, I ensure every decision is user-focused and intentional. Collaboration is at the core of my work, aligning teams around a shared vision to drive innovation.
             </p>
             <h2 className="text-3xl font-bold text-gray-900 mb-6">Skills</h2>
             <p>
