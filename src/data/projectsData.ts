@@ -1,9 +1,8 @@
 const getImagePath = (path: string) => {
   return process.env.NODE_ENV === 'production' 
-    ? path 
-    : path.replace('/ux-portfolio', '');
- };
- 
+    ? path.replace('/ux-portfolio', '') // Remove prefix for production
+    : path.replace('/ux-portfolio', ''); // Remove prefix for development
+};
  export interface ProjectDetailContent {
     id: string;
     title: string;
