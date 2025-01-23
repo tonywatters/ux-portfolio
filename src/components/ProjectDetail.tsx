@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { projectsData } from '../data/projectsData';
 import ImageModal from './ImageModal';
 
 const ProjectDetail: React.FC = () => {
   const { id } = useParams();
-  const navigate = useNavigate();
   const location = useLocation();
   const project = projectsData.find(p => p.id === id);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -16,11 +15,7 @@ const ProjectDetail: React.FC = () => {
   }, []);
 
   const handleNavClick = (sectionId: string) => {
-    if (location.pathname !== '/') {
-      window.location.href = `/ux-portfolio/#${sectionId}`;
-    } else {
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
-    }
+    window.location.href = `/ux-portfolio/${sectionId}`;
   };
 
   if (!project) {
