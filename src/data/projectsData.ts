@@ -1,8 +1,11 @@
 const getImagePath = (path: string) => {
+  // Remove duplicate "/ux-portfolio" if present
+  const cleanPath = path.replace('/ux-portfolio/', '/');
   return process.env.NODE_ENV === 'production' 
-    ? path.replace('/ux-portfolio', '') // Remove prefix for production
-    : path.replace('/ux-portfolio', ''); // Remove prefix for development
+    ? cleanPath
+    : cleanPath.replace('/ux-portfolio/', '/');
 };
+
  export interface ProjectDetailContent {
     id: string;
     title: string;
