@@ -9,12 +9,6 @@ const ProjectDetail: React.FC = () => {
  const location = useLocation();
  const project = projectsData.find(p => p.id === id);
  const [selectedImage, setSelectedImage] = useState<string | null>(null);
- 
- const getImagePath = (path: string) => {
-   return process.env.NODE_ENV === 'production' 
-     ? `/ux-portfolio${path}`
-     : path;
- };
 
  useEffect(() => {
    window.scrollTo(0, 0);
@@ -46,7 +40,7 @@ const ProjectDetail: React.FC = () => {
        
        <div className="mb-8">
          <img 
-           src={getImagePath(project.mainImage)}
+           src={project.mainImage}
            alt={project.title} 
            className="w-full rounded-lg shadow-lg"
          />
@@ -64,7 +58,7 @@ const ProjectDetail: React.FC = () => {
              {project.processImages.map((image, index) => (
                <img 
                  key={index}
-                 src={getImagePath(image)}
+                 src={image}
                  alt={`Process step ${index + 1}`}
                  className="rounded-lg shadow-md cursor-pointer hover:opacity-95 transition-opacity"
                  onClick={() => setSelectedImage(image)}
@@ -84,7 +78,7 @@ const ProjectDetail: React.FC = () => {
              {project.resultImages.map((image, index) => (
                <img 
                  key={index}
-                 src={getImagePath(image)}
+                 src={image}
                  alt={`Result ${index + 1}`}
                  className="rounded-lg shadow-md cursor-pointer hover:opacity-95 transition-opacity"
                  onClick={() => setSelectedImage(image)}
@@ -96,7 +90,7 @@ const ProjectDetail: React.FC = () => {
      </div>
 
      <ImageModal
-       image={selectedImage ? getImagePath(selectedImage) : ''}
+       image={selectedImage || ''}
        alt="Project detail"
        isOpen={!!selectedImage}
        onClose={() => setSelectedImage(null)}
