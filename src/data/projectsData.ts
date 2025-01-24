@@ -1,10 +1,9 @@
 const getImagePath = (path: string) => {
-  // Remove any existing /ux-portfolio/ prefixes
-  const cleanPath = path.replace('/ux-portfolio/', '/').replace('/pages/', '/');
+  const cleanPath = path.replace('/ux-portfolio/', '/');
   return process.env.NODE_ENV === 'production'
-    ? `/ux-portfolio/pages${cleanPath}`
-    : `/pages${cleanPath}`;
-};
+    ? `/ux-portfolio/images/pages${cleanPath}`
+    : `/images/pages${cleanPath}`;
+ };
 
  export interface ProjectDetailContent {
     id: string;
