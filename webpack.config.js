@@ -9,7 +9,8 @@ module.exports = {
  output: {
    path: path.resolve(__dirname, 'dist'),
    filename: 'bundle.js',
-   publicPath: isProduction ? '/ux-portfolio/' : '/'
+   publicPath: isProduction ? '/ux-portfolio/' : '/',
+   clean: true
  },
  mode: isProduction ? 'production' : 'development',
  module: {
@@ -47,7 +48,8 @@ module.exports = {
    }),
    new CopyWebpackPlugin({
      patterns: [
-       { from: 'public/images', to: 'images' }
+       { from: 'public/images', to: 'images' },
+       { from: 'public/404.html', to: '404.html' }
      ]
    })
  ],
@@ -57,6 +59,11 @@ module.exports = {
    },
    port: 3000,
    hot: true,
-   historyApiFallback: true
+   historyApiFallback: {
+     rewrites: [
+       { from: /^\/ux-portfolio\/.*/, to: '/ux-portfolio/index.html' }
+     ],
+     index: '/index.html'
+   }
  },
 };

@@ -1,7 +1,8 @@
 const getImagePath = (path: string) => {
+  const imagePath = path.replace(/^\/ux-portfolio\//, '');
   return process.env.NODE_ENV === 'production'
-    ? `/ux-portfolio/images${path.startsWith('/images') ? path.slice(7) : path}`
-    : `/images${path.startsWith('/images') ? path.slice(7) : path}`;
+    ? `/ux-portfolio/${imagePath}`
+    : `/${imagePath}`;
 };
 
  export interface ProjectDetailContent {
