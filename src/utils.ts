@@ -8,6 +8,7 @@ export const scrollToSection = (sectionId: string, currentPath: string) => {
 };
 
 export const getImagePath = (path: string) => {
+  // Remove any existing /ux-portfolio/ prefix
   const cleanPath = path.replace(/^\/ux-portfolio\//, '');
   return process.env.NODE_ENV === 'production'
     ? `/ux-portfolio/${cleanPath}`
