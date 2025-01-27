@@ -13,10 +13,12 @@ const Navigation: React.FC<NavigationProps> = ({ isMenuOpen, setIsMenuOpen, name
   
   const handleNavClick = (sectionId: string) => {
     if (location.pathname.includes('/project/')) {
-      window.location.href = `/ux-portfolio/#${sectionId}`;
+      window.location.href = process.env.NODE_ENV === 'production' 
+        ? `/ux-portfolio/#${sectionId}`
+        : `/#${sectionId}`;
     } else {
-      window.location.hash = sectionId;
-      document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+      const element = document.getElementById(sectionId);
+      element?.scrollIntoView({ behavior: 'smooth' });
     }
   };
 

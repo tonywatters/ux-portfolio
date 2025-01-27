@@ -48,7 +48,7 @@ const ProjectDetail: React.FC = () => {
 
        <div className="prose max-w-none">
          <h2 className="text-2xl font-semibold mb-4">Challenge</h2>
-         <p className="text-gray-600 mb-6">{project.challenge}</p>
+         <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: project.challenge }} />
 
          <h2 className="text-2xl font-semibold mb-4">Process</h2>
          <p className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: project.process }} />
