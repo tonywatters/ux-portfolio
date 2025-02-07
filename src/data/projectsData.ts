@@ -29,7 +29,7 @@ export const projectsData: ProjectDetailContent[] = [
     results: "The design enhanced admin workflows for content performance analysis, improved data visualization, and enabled intuitive filtering for segmented data views. The interface adhered to WCAG guidelines, received positive stakeholder feedback, and ensured a smooth handoff to the development team, driving successful implementation.",
     processImages: [
       getImagePath("images/pages/filters3.png"),
-      getImagePath("images/pages/filters1.png")
+      getImagePath("images/pages/filter4.png")
     ]
   },
 

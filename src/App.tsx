@@ -27,7 +27,7 @@ const App: React.FC = () => {
       title: "Learning Pool Search Filters",
       description: "A comprehensive filtering interface was designed for the Learning Experience Platform's search functionality. ",
       tags: ["UX Research", "User Testing", "Mobile Design", "Wireframing", "Prototyping"],
-      image: process.env.NODE_ENV === 'production' ? "/ux-portfolio/images/pages/filters1.png" : "/images/pages/filters1.png"
+      image: process.env.NODE_ENV === 'production' ? "/ux-portfolio/images/pages/filters4.png" : "/images/pages/filter4.png"
     },
     {
       id: 'discover',
