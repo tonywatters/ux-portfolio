@@ -23,6 +23,13 @@ const App: React.FC = () => {
 
   const projects: Project[] = [
     {
+      id: 'search',
+      title: "Learning Pool Search Filters",
+      description: "A comprehensive filtering interface was designed for the Learning Experience Platform's search functionality. ",
+      tags: ["UX Research", "User Testing", "Mobile Design", "Wireframing", "Prototyping"],
+      image: process.env.NODE_ENV === 'production' ? "/ux-portfolio/images/pages/filters1.png" : "/images/pages/filters1.png"
+    },
+    {
       id: 'discover',
       title: "Public Discovery Page: Frontend for Guests",
       description: "Our goal is to maintain consistency with the current design of the Discover page while also optimizing user flows for registration and purchasing.",
