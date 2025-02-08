@@ -16,22 +16,22 @@ export interface ProjectDetailContent {
 }
 
 export const projectsData: ProjectDetailContent[] = [
-  {
-    id: 'search',
-    title: "LXP Search - Filter Interface Design",
-    description: "A comprehensive filtering interface was designed for the Learning Experience Platform's search functionality. The design prioritizes immediate access to all filtering options through an expanded view, while maintaining clean visual hierarchy and user control through collapsible sections. The interface combines multiple input types (checkboxes, tags) to provide flexible filtering options while keeping the interaction model simple and intuitive.",
-    tags: ["Information Architecture", "Data Visualization", "Wirefames", "Prototyping"],
-    image: getImagePath("images/pages/filters1.png"),
-    mainImage: getImagePath("images/pages/filters2.png"),
-    challenge: "Customers are currently having difficulties finding the content they need due to the return of irrelevant search results and a clunky user interface with limited filtering options. This makes it difficult for learners to refine their searches and locate relevant content efficiently.pr",
-    process: "The design process began with crafting an expanded view interface that displays all options by default, ensuring clarity and ease of use. A strong visual hierarchy was established through strategic spacing and typography, enhancing readability and usability. Clear empty states were defined for filter sections to provide guidance when no options were selected.",
-    solution: "We delivered low-fidelity wireframes, high-fidelity mockups, interactive prototypes, and detailed design specifications to streamline the design process. The solution focused on creating an intuitive, filterable Key Metrics feature for the Content Details tab, providing administrators with improved workflows and accessible interfaces. <br/> <br/> To support functionality, key UI elements were implemented, including a filter header with a counter and clear functionality, collapsible section headers, and checkbox inputs for binary selections. An interactive tag system was introduced for multi-select options, accompanied by empty state messaging. Consistent spacing and alignment systems were applied to maintain a cohesive and structured interface. ",
-    results: "The design enhanced admin workflows for content performance analysis, improved data visualization, and enabled intuitive filtering for segmented data views. The interface adhered to WCAG guidelines, received positive stakeholder feedback, and ensured a smooth handoff to the development team, driving successful implementation.",
-    processImages: [
-      getImagePath("images/pages/filters3.png"),
-      getImagePath("images/pages/filter4.png")
-    ]
-  },
+  // {
+  //   id: 'search',
+  //   title: "LXP Search - Filter Interface Design",
+  //   description: "A comprehensive filtering interface was designed for the Learning Experience Platform's search functionality. The design prioritizes immediate access to all filtering options through an expanded view, while maintaining clean visual hierarchy and user control through collapsible sections. The interface combines multiple input types (checkboxes, tags) to provide flexible filtering options while keeping the interaction model simple and intuitive.",
+  //   tags: ["Information Architecture", "Data Visualization", "Wirefames", "Prototyping"],
+  //   image: getImagePath("images/pages/filters1.png"),
+  //   mainImage: getImagePath("images/pages/filters2.png"),
+  //   challenge: "Customers are currently having difficulties finding the content they need due to the return of irrelevant search results and a clunky user interface with limited filtering options. This makes it difficult for learners to refine their searches and locate relevant content efficiently.pr",
+  //   process: "The design process began with crafting an expanded view interface that displays all options by default, ensuring clarity and ease of use. A strong visual hierarchy was established through strategic spacing and typography, enhancing readability and usability. Clear empty states were defined for filter sections to provide guidance when no options were selected.",
+  //   solution: "We delivered low-fidelity wireframes, high-fidelity mockups, interactive prototypes, and detailed design specifications to streamline the design process. The solution focused on creating an intuitive, filterable Key Metrics feature for the Content Details tab, providing administrators with improved workflows and accessible interfaces. <br/> <br/> To support functionality, key UI elements were implemented, including a filter header with a counter and clear functionality, collapsible section headers, and checkbox inputs for binary selections. An interactive tag system was introduced for multi-select options, accompanied by empty state messaging. Consistent spacing and alignment systems were applied to maintain a cohesive and structured interface. ",
+  //   results: "The design enhanced admin workflows for content performance analysis, improved data visualization, and enabled intuitive filtering for segmented data views. The interface adhered to WCAG guidelines, received positive stakeholder feedback, and ensured a smooth handoff to the development team, driving successful implementation.",
+  //   processImages: [
+  //     getImagePath("images/pages/filters3.png"),
+  //     getImagePath("images/pages/filter4.png")
+  //   ]
+  // },
 
   {
     id: 'learning-pool',
