@@ -22,13 +22,13 @@ const App: React.FC = () => {
   const basename = process.env.NODE_ENV === 'production' ? '/ux-portfolio' : '/';
 
   const projects: Project[] = [
-    // {
-    //   id: 'search',
-    //   title: "Learning Pool Search Filters",
-    //   description: "A comprehensive filtering interface was designed for the Learning Experience Platform's search functionality. ",
-    //   tags: ["UX Research", "User Testing", "Mobile Design", "Wireframing", "Prototyping"],
-    //   image: process.env.NODE_ENV === 'production' ? "/ux-portfolio/images/pages/filters4.png" : "/images/pages/filter4.png"
-    // },
+    {
+      id: 'search',
+      title: "Learning Pool Search Filters",
+      description: "Enhanced Filtering Interface for Learning Experience Platform",
+      tags: ["UX Research", "User Testing", "Mobile Design", "Wireframing", "Prototyping"],
+      image: process.env.NODE_ENV === 'production' ? "/ux-portfolio/images/pages/filter4.png" : "/images/pages/filter4.png"
+    },
     {
       id: 'discover',
       title: "Public Discovery Page: Frontend for Guests",
