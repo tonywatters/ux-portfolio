@@ -77,7 +77,7 @@ export const projectsData: ProjectDetailContent[] = [
     solution: "We created interactive features to support employee upskilling. The Get Started Card helped employees build their Eightfold profiles, while Call to Action Cards provided access to resources like role exploration, skills learning, and career coaching. Skills Cards shared company announcements, the Jobs Card highlighted internal roles with application options, and a Career Advice Booking System enabled easy scheduling with career coaches.",
     results: "Prototypes and Designs Logo designs for branding various features. Prototypes built in Adobe XD to visualize user interactions and workflows.",
     processImages: [
-      getImagePath("images/pages/skills_1.jpg"),
+      getImagePath("images/pages/skills.png"),
       getImagePath("images/pages/skills_2.jpg")
     ],
     resultImages: [
